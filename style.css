@@ -481,6 +481,26 @@ body::before {
     margin-right: auto;
 }
 
+.contact-info {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto 3rem;
+    max-width: 700px;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: var(--primary-color);
+}
+
 .social-links {
     display: flex;
     justify-content: center;
