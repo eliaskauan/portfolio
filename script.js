@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         element.addEventListener('mouseleave', function() {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.borderColor = '#00ff88';
+            cursor.style.borderColor = '#0080ff';
             cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
             cursorFollower.style.opacity = '1';
         });
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             particle.style.position = 'absolute';
             particle.style.width = '2px';
             particle.style.height = '2px';
-            particle.style.background = 'rgba(0, 255, 136, 0.3)';
+            particle.style.background = 'rgba(0, 255, 136, 0.5)';
             particle.style.borderRadius = '50%';
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
@@ -228,7 +228,10 @@ let isDeleting = false;
 
 function typeEffect() {
     const subtitle = document.querySelector('.hero-subtitle .variable');
-    if (!subtitle) return;
+    if (!subtitle) {
+        console.log('Elemento .hero-subtitle .variable não encontrado');
+        return;
+    }
     
     const currentPhrase = phrases[phraseIndex];
     
